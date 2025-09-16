@@ -4,10 +4,8 @@ import dotenv from "dotenv";
 import connectDB from "./config/db";
 import authRoutes from "./routes/auth.routes";
 import orderRoutes from './routes/order.routes'
-
-
-// Import routes
 import productRoutes from "./routes/product.routes"; // <-- IMPORT THE ROUTER
+import paymentRoutes from './routes/payment.routes';
 
 // Load environment variables
 dotenv.config();
@@ -30,5 +28,6 @@ app.get("/api/health", (req: Request, res: Response) => {
 app.use("/api/products", productRoutes);
 app.use("/api/auth", authRoutes);
 app.use('/api/orders', orderRoutes);
+app.use('/api/payments', paymentRoutes); 
 
 export default app;
