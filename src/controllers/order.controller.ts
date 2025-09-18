@@ -18,6 +18,8 @@ export const addOrderItems = async (req: Request, res: Response) => {
       taxPrice,
       shippingPrice,
       totalPrice,
+      isPaid,
+      paidAt,
     } = req.body;
 
     if (!orderItems || orderItems.length === 0) {
@@ -33,6 +35,8 @@ export const addOrderItems = async (req: Request, res: Response) => {
       taxPrice,
       shippingPrice,
       totalPrice,
+      ...(typeof isPaid !== 'undefined' && { isPaid }),
+      ...(typeof paidAt !== 'undefined' && { paidAt }),
     });
 
     const createdOrder = await order.save();
