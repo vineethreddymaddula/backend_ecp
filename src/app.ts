@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import connectDB from "./config/db";
 import authRoutes from "./routes/auth.routes";
 import orderRoutes from './routes/order.routes'
-import productRoutes from "./routes/product.routes"; // <-- IMPORT THE ROUTER
+import productRoutes from "./routes/product.routes"; 
 import paymentRoutes from './routes/payment.routes';
 
 // Load environment variables
