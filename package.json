@@ -20,7 +20,12 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.18.1",
     "razorpay": "^2.9.6",
-    "zod": "^4.1.8"
+    "zod": "^4.1.8",
+    "@types/node": "^24.3.1",
+    "@types/express": "^5.0.3",
+    "@types/cors": "^2.8.19",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/bcryptjs": "^2.4.6"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
