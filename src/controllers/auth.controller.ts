@@ -31,8 +31,8 @@ export const registerUser = async (req: Request, res: Response) => {
         email: user.email,
         role: user.role,
         // FIX: Assert the type of _id to mongoose.Types.ObjectId before calling .toString()
-        token: generateToken(
-          (user._id as mongoose.Types.ObjectId).toString(),
+    token: generateToken(
+          ((user._id as unknown) as mongoose.Types.ObjectId).toString(),
           user.role
         ),
       });
@@ -65,8 +65,8 @@ export const loginUser = async (req: Request, res: Response) => {
         email: user.email,
         role: user.role,
         // FIX: Assert the type of _id to mongoose.Types.ObjectId before calling .toString()
-        token: generateToken(
-          (user._id as mongoose.Types.ObjectId).toString(),
+     token: generateToken(
+          ((user._id as unknown) as mongoose.Types.ObjectId).toString(),
           user.role
         ),
       });

@@ -13,7 +13,6 @@
   "description": "",
   "dependencies": {
     "bcryptjs": "^3.0.2",
-    "cashfree": "^1.0.1",
     "cashfree-pg": "^5.0.8",
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
